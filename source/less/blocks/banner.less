@@ -1,0 +1,63 @@
+.banner {
+  background-image: url("../img/intro-triangle.svg"), url("../img/intro.jpg");
+  background-position: center bottom, center 55px;
+  background-repeat: no-repeat;
+  background-size: auto, auto 390px;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-triangle.svg"), url("../img/intro@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/intro-triangle.svg"), url("../img/back-desktop.jpg");
+    background-position: center 463px, center 0;
+    background-size: 156%, 156% 520px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/intro-triangle.svg"), url("../img/back-desktop.jpg");
+    background-position: center 463px, center 0;
+    background-size: 100% 57px, 100% 520px;
+  }
+}
+
+.banner__logo {
+  position: absolute;
+  left: calc(50% - 51px);
+  width: min-content;
+  // height: 84px;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/logo-backup-desk.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 21px), 10px;
+    left: calc(50% - 93px);
+    padding-left: 42px;
+    height: 97px;
+    width: 186px;
+  }
+}
+
+.banner__slogan {
+  display: block;
+  // margin: 90px 20px 85px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 145px;
+  width: 90%;
+
+  @media (min-width: @tablet-width) {
+    height: 67%;
+    margin-top: 78px;
+  }
+  @media (min-width: @desktop-width) {
+    height: 67%;
+    margin-top: 80px;
+  }
+}

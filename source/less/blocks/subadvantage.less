@@ -1,0 +1,98 @@
+.subadvantage {
+  list-style: none;
+  padding: 0 40px 13px 0;
+
+  @media (max-width: @mobile-width-only) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: min-content 1fr;
+    align-items: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    align-self: center;
+    text-align: center;
+  }
+}
+
+.subadvantage::before {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    left: 22px;
+    top: 5px;
+    grid-column: ~"1/2";
+    grid-row: ~"1/2";
+    width: 36px;
+    height: 50px;
+    background-size: 36px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    left: calc(50% - 38px);
+    top: 35px;
+  }
+}
+
+.subadvantage:first-child::before {
+  background-image: url("../img/icon-house.svg");
+}
+
+.subadvantage:nth-child(2)::before {
+  background-image: url("../img/icon-gift.svg");
+}
+
+.subadvantage:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.subadvantage:nth-child(3)::before {
+  background-image: url("../img/icon-burger.svg");
+}
+
+.subadvantage__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: @main-black;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0;
+    grid-column: ~"2/3";
+    grid-row: ~"1/2";
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 60px;
+    font-size: 20px;
+    padding: 0 20px;
+  }
+}
+
+.subadvantage__description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: @description-color;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0;
+    grid-column: ~"2/3";
+    grid-row: ~"2/3";
+    margin-top: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 31px;
+  }
+}

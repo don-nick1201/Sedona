@@ -1,0 +1,69 @@
+.page-header {
+  background-color: @main-white;
+  display: flex;
+  flex-direction: column;
+}
+// Рисунок вверху главной страницы
+.page-header__banner {
+  width: 100%;
+  height: 445px;
+
+  @media (min-width: @tablet-width) {
+    height: 525px;
+    margin-bottom: 3px;
+  }
+  @media (min-width: @desktop-width) {
+    height: 525px;
+    margin-bottom: 14px;
+  }
+}
+
+.page-header__banner-second {
+  width: 100%;
+  height: 218px;
+  margin-bottom: -10px;
+
+  @media (min-width: @tablet-width) {
+    height: 290px;
+    // margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 300px;
+    // margin-bottom: 30px;
+  }
+}
+
+.page-header__nav {
+  // position: absolute;
+  top: 0;
+  min-width: 320px;
+  width: 100%;
+}
+
+.page-header__nav-toggle {
+  display: block;
+  background-color: @main-white;
+  // background-color: transparent;
+  border: none;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.page-header__nav-list {
+  list-style: none;
+  font-weight: bold;
+  color: @main-white;
+  font-size: 18px;
+  line-height: 50px;
+  background-color: @menu-phone;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+  padding-left: 0;
+}
+
+.page-header__nav-link {
+  text-decoration: none;
+}

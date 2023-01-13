@@ -1,0 +1,33 @@
+.banner-second {
+  background-image: url("../img/intro-triangle.svg"), url("../img/white-square.svg"), url("../img/back-second-mobile.jpg");
+  background-position: center 158px, center 0, center 0;
+  background-repeat: no-repeat;
+  background-size: auto, auto, 100% 215px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-triangle.svg"), url("../img/white-square.svg"), url("../img/back-second-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/intro-triangle.svg"), url("../img/back-second-tablet.jpg");
+    background-position: center 236px, center -55px;
+    background-size: 193% 54px, 100% 350px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: center 246px, center -55px;
+    background-size: 100% 54px, 100% 359px;
+  }
+}
+
+.banner-second__slogan {
+  margin-left: calc(50% - 115px);
+  margin-top: 21px;
+  width: 230px;
+
+  @media (min-width: @tablet-width) {
+    width: 450px;
+    margin-top: 30px;
+    margin-left: calc(50% - 225px);
+  }
+}

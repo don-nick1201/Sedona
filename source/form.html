@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: {{projectTitle}}</title>
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon152.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="page">
+  <div class="page__wrapper">
+    <header class="page__page-header page-header">
+      <!-- Навигация -->
+      <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
+        <!-- Само меню -->
+        <div class="main-nav__wrapper">
+          <button class="main-nav__close" type="button">
+            <svg class="main-nav__botton-cross" width="30" height="30" viewBox="1 1 30 30" fill="#81b3d2">
+              <line x1="3" x2="27" y1="3" y2="27" stroke-width="4" stroke="white"></line>
+              <line x1="3" x2="27" y1="27" y2="3" stroke-width="4" stroke="white"></line>
+            </svg>
+          </button>
+          <ul class="main-nav__list site-list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">
+                ФОТО И ВИДЕО
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link">
+                ФОРМА ОТЗЫВА
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                HTML ACADEMY
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Кнопка вызова меню -->
+        <button class="main-nav__toggle" type="button">
+          <svg class="main-nav__botton-line" width="30" height="30" viewBox="1 1 30 30" fill="white">
+            <line x1="1" x2="25" y1="6" y2="6" stroke-width="4" stroke="#81b3d2"></line>
+            <line x1="1" x2="25" y1="15" y2="15" stroke-width="4" stroke="#81b3d2"></line>
+            <line x1="1" x2="25" y1="24" y2="24" stroke-width="4" stroke="#81b3d2"></line>
+          </svg>
+        </button>
+      </nav>
+      <!-- Картинка с пейзажем вверху страницы -->
+      <section class="page-header__banner-second banner-second">
+        <!-- Логотип -->
+        <a class="banner__logo">
+          <picture>
+            <source srcset="img/logotype-tablet.svg" media="(min-width: 768px)">
+            <img src="img/logotype-mobile.svg" width="102" height="84" alt="Седона">
+          </picture>
+        </a>
+        <img class="banner-second__slogan" src="img/SEDONA.svg" alt="Welcome to the gorgeous Sedona" width="100%"
+          height="215">
+      </section>
+    </header>
+    <main class="page__page-main page-main">
+      <div class="page-main__wrapper--form">
+        <h1 class="visually-hidden">Форма обратной связи</h1>
+        <section class="main-header">
+          <h2 class="main-header__header main-header__header--form">Оставьте свой отзыв</h2>
+          <p class="main-header__descr main-header__descr--form">Помогите нашим отелям стать лучше! оставьте отзыв о
+            них,
+            а также о посещенных вами достопримечательностях</p>
+        </section>
+        <form class="profile-form  container" action="https://echo.htmlacademy.ru" method="post">
+          <!-- Блок для ввода ФИО -->
+          <fieldset class="profile-form__block profile-form__personal">
+            <legend class="profile-form__legend" align="center">Представьтесь:</legend>
+            <div class="profile-form__input-line">
+              <label class="profile-form__label" for="firstName">Имя*:</label>
+              <input class="profile-form__input" type="text" name="firstName" id="firstName" placeholder="Петр"
+                required>
+            </div>
+            <div class="profile-form__input-line">
+              <label class="profile-form__label" for="surName">Фамилия*:</label>
+              <input class="profile-form__input" type="text" name="surName" id="surName" placeholder="Иванов" required>
+            </div>
+            <div class="profile-form__input-line">
+              <label class="profile-form__label" for="patronymic">Отчество:</label>
+              <input class="profile-form__input" type="text" name="patronymic" id="patronymic"
+                placeholder="Александрович">
+            </div>
+          </fieldset>
+          <!-- Блок для ввода телефона и почты -->
+          <fieldset class="profile-form__block profile-form__contacts">
+            <legend class="profile-form__legend profile-form__legend--contacts" align="center">Контактная информация:</legend>
+            <label class="profile-form__label-contact" for="phone"><span class="profile-form__fitcha">Контактный
+              </span>телефон*:</label>
+            <div class="profile-form__input-block profile-form__tel-input">
+              <input class="profile-form__input profile-form__input-tel" type="tel" name="phone" id="phone"
+                placeholder="Введите телефон">
+              <button class="profile-form__button" disabled><img src="img/phone.svg" alt=""></button>
+            </div>
+            <label class="profile-form__label-contact" for="email">Электронная&nbspпочта*:</label>
+            <div class="profile-form__input-block profile-form__mail-input">
+              <input class="profile-form__input profile-form__input-email" type="month" name="email" id="email"
+                placeholder="Введите e-mail">
+              <button class="profile-form__button" disabled><img src="img/mail.svg" alt=""></button>
+            </div>
+          </fieldset>
+
+          <!-- Блок с оценкой впечатлений -->
+          <fieldset class="profile-form__block profile-form__impressions">
+            <legend class="profile-form__legend" align="center">Ваше общее впечатление:</legend>
+            <div class="profile-form__radio-block">
+              <input class="visually-hidden profile-form__radio-input" type="radio" name="impression" id="positive"
+                value="positive" checked>
+              <label class="profile-form__radio-label" for="positive">
+                Скорее положительное
+              </label>
+              <input class="visually-hidden profile-form__radio-input" type="radio" name="impression" value="negative"
+                id="negative">
+              <label class="profile-form__radio-label" for="negative">
+                Скорее отрицательное
+              </label>
+              <input class="visually-hidden profile-form__radio-input" type="radio" name="impression" id="don't know">
+              <label class="profile-form__radio-label" for="don't know">
+                Затрудняюсь ответить
+              </label>
+            </div>
+          </fieldset>
+          <!-- Блок с отметками посещенных достопримечательностей -->
+          <fieldset class="profile-form__block profile-form__places">
+            <legend class="profile-form__legend profile-form__legend-places" align="center">Посещенные<br>
+              достопримечательности:</legend>
+            <div class="profile-form__check-block">
+              <input class="visually-hidden profile-form__radio-input" type="checkbox" name="bridgeOfDevil"
+                checked="true" id="bridgeOfDevil">
+              <label class="profile-form__check-label" for="bridgeOfDevil">
+                Мост Дьявола
+              </label>
+
+              <input class="visually-hidden profile-form__radio-input" type="checkbox" name="mountBell" checked
+                id="mountBell">
+              <label class="profile-form__check-label" for="mountBell">
+                Гора-Колокол
+              </label>
+
+              <input class="visually-hidden profile-form__radio-input" type="checkbox" name="slidePark" checked
+                id="slidePark">
+              <label class="profile-form__check-label" for="slidePark">
+                Слайд-парк
+              </label>
+
+              <input class="visually-hidden profile-form__radio-input" type="checkbox" name="redRocks" id="redRocks">
+              <label class="profile-form__check-label" for="redRocks">
+                Красные скалы
+              </label>
+            </div>
+          </fieldset>
+          <!-- Блок с комментариями -->
+          <fieldset class="profile-form__block profile-form__comments">
+            <legend class="profile-form__legend profile-form__legend--contacts" align="center">Опишите свои эмоции</legend>
+            <textarea class="profile-form__emotions" name="emotions"
+              placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <!-- Кнопка для отправки формы на сервер -->
+          <input class="profile-form__main-button" type="submit" value="Отправить отзыв">
+          <p class="profile-form__footnote">* - обязательные поля</p>
+        </form>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__link">#VisitSedona</p>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="http://www.twitter.com/htmlacademy">
+              <img class="page-footer__twitter-img" src="img/icon-twitter.svg">
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://www.facebook.com/htmlacademy">
+              <img class="page-footer__facebook-img" src="img/icon-facebook.svg">
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://www.instagram.com/htmlacademy">
+              <img class="page-footer__utube-img" src="img/icon-youtube.svg">
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="page-footer__copyright-text">разработано</p>
+          <svg width="27px" height="34px"  class="page-footer__copyright-img">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+// Общие правила для видео
+.presentation {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  padding-bottom: 66px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
+}
+
+.presentation__wrapper {
+  margin: 0 0 42px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 60px 42px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    margin: 40px auto 91px auto;
+  }
+}
+// ккк
+.presentation__caption {
+  // font-weight: bold;
+  // font-size: 18px;
+  // line-height: 26px;
+  // margin-bottom: 28px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-top: 65px;
+    margin-bottom: 33px;
+  }
+}
+
+.presentation__description {
+  font-style: normal;
+  font-size: 14px;
+  color: @description-color;
+  margin-top: 7px;
+  line-height: 25px;
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+    padding: 0 130px;
+  }
+}
+
+.presentation__image img {
+  // margin: 0 20px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 500px;
+  }
+}
+
+.presentation__video-rule {
+  position: absolute;
+  height: 120px;
+  width: calc(100% - 40px);
+  bottom: 0;
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    height: 93px;
+    width: calc(100% - 120px);
+    margin: 0;
+    bottom: -65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    margin: 0 auto;
+  }
+}

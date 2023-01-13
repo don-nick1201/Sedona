@@ -1,0 +1,179 @@
+// @import "blocks/main-nav.less";
+// стиль для всей секции навигации
+.main-nav {
+  mix-blend-mode: normal;
+  background-color: @main-white;
+}
+.main-nav__wrapper {
+  width: 320px;
+  // Стили для планшетной версии
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+  // Стили для десктопной версии
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+// Стиль для всего меню
+.main-nav__list {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: @mobile-width-only) {
+  // Описываем общеий вид меню для мобильной версии
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    right: 0;
+    background-color: @menu-phone;
+    z-index: 2;
+  }
+// Меню для планшетной и десктопной версии
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+  }
+}
+// Стиль для пункта меню
+.main-nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+
+  @media (max-width: @mobile-width-only) {
+    // Описываем общий вид пункта меню для мобильной версии
+    height: 55px;
+    background: @menu-phone;
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background-color: @menu-phone-active;
+    }
+
+    &:active {
+      background-color: @menu-phone-pressed;
+      opacity: 0.3;
+      outline: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 20%;
+// Меню при наведении мыши
+    &:hover a {
+      color: @menu-phone;
+    }
+
+    & a:focus {
+      color: @menu-phone;
+      border: none;
+      outline: 0;
+    }
+
+    &:active a {
+      opacity: 0.3;
+      outline: 0;
+    }
+  }
+}
+// Стиль для ссылки в пункте меню
+.main-nav__link {
+  color: @main-black;
+  text-decoration: none;
+}
+// Стили только для мобильной версии
+@media (max-width: @mobile-width-only) {
+// стиль для кнопки показа мобильного меню
+  .main-nav__toggle {
+    border: none;
+    position: absolute;
+    right: 10px;
+    z-index: 3;
+    display: block;
+    height: 58px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+      outline: 0;
+    }
+  }
+// стиль для кнопки скрытия мобильного меню
+  .main-nav__close {
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 3;
+    display: block;
+    height: 58px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+      outline: 0;
+    }
+  }
+  // Навигация, когда мобильное меню открыто
+  .main-nav--opened {
+    .main-nav__botton-cross {
+      display: block;
+    }
+
+    .main-nav__list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // Навигация, когда мобильное меню закрыто
+  .main-nav--closed {
+    .main-nav__botton-cross {
+      display: none;
+    }
+
+    .main-nav__list {
+      display: none;
+    }
+  }
+}
+// Меню для планшетной и десктопной версии
+@media (min-width: @tablet-width) {
+  .main-nav__toggle,
+  .main-nav__close {
+    display: none;
+  }
+}
+// Стили для навигации при отключенном javascript
+.main-nav--nojs {
+  // Кнопка не видна
+  .main-nav__toggle {
+    display: none;
+  }
+  // Меню всегда открыто
+  .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+}

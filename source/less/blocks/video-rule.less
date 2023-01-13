@@ -1,0 +1,124 @@
+// Панель на которой отображается линейка текущего места просмотра
+.video-rule__panel {
+  position: relative;
+  height: 24px;
+  margin: -40px 0 0 0;
+  padding: 20px 20px 0 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  @media (min-width: @tablet-width) {
+    height: 48px;
+    padding: 45px 166px 0 93px;
+    margin: -74px 0 0 0;
+  }
+}
+// Горизонтальная линия, представляющая длительность видео
+.video-rule__line {
+  height: 3px;
+  background-color: @main-white;
+  opacity: 0.2;
+}
+// Точка показывающая текущий кадр
+.video-rule__position {
+  position: absolute;
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  left: 57px;
+  top: 19px;
+  background-color: @main-white;
+
+  @media (min-width: @tablet-width) {
+    left: 204px;
+    top: 40px;
+  }
+}
+// Панель с кнопками управления
+.video-rule__buttons {
+  background-color: @field-phone;
+  height: 66px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    position: absolute;
+    height: 93px;
+    top: -73px;
+    // outline: 5px solid #ff0000;
+    width: 100%;
+  }
+}
+// Общее правило для всех кнопок
+.video-rule__button {
+  position: absolute;
+  border: none;
+  top: 24px;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    top: 32px;
+  }
+}
+
+.video-rule__button:hover .video-rule__img {
+  fill: @mobile-botton-hover-color;
+
+  @media (min-width: @tablet-width) {
+    fill: @main-white;
+    opacity: 0.6;
+  }
+}
+
+.video-rule__button:focus .video-rule__img {
+  fill: @mobile-botton-hover-color;
+
+  @media (min-width: @tablet-width) {
+    fill: @main-white;
+    opacity: 0.6;
+  }
+}
+
+
+.video-rule__button:active .video-rule__img {
+  fill: @mobile-botton-hover-color;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    fill: @main-white;
+    opacity: 0.3;
+  }
+}
+
+.video-rule__replay {
+  left: 22px;
+
+  @media (min-width: @tablet-width) {
+    left: 31px;
+  }
+}
+
+.video-rule__subtitles {
+  right: 70px;
+
+  @media (min-width: @tablet-width) {
+    right: 89px;
+  }
+}
+
+.video-rule__fullscreen {
+  right: 20px;
+
+  @media (min-width: @tablet-width) {
+    right: 37px;
+  }
+}
+
+.video-rule__img,
+.video-rule__img path {
+  fill: @mobile-botton-color;
+
+  @media (min-width: @tablet-width) {
+    fill: @main-white;
+  }
+}
