@@ -4,6 +4,7 @@
   mix-blend-mode: normal;
   background-color: @main-white;
 }
+
 .main-nav__wrapper {
   width: 320px;
   // Стили для планшетной версии
@@ -26,7 +27,7 @@
   list-style: none;
 
   @media (max-width: @mobile-width-only) {
-  // Описываем общеий вид меню для мобильной версии
+    // Описываем общеий вид меню для мобильной версии
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -36,7 +37,7 @@
     background-color: @menu-phone;
     z-index: 2;
   }
-// Меню для планшетной и десктопной версии
+  // Меню для планшетной и десктопной версии
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
@@ -71,7 +72,7 @@
 
   @media (min-width: @tablet-width) {
     width: 20%;
-// Меню при наведении мыши
+    // Меню при наведении мыши
     &:hover a {
       color: @menu-phone;
     }
@@ -95,7 +96,7 @@
 }
 // Стили только для мобильной версии
 @media (max-width: @mobile-width-only) {
-// стиль для кнопки показа мобильного меню
+  // стиль для кнопки показа мобильного меню
   .main-nav__toggle {
     border: none;
     position: absolute;
@@ -115,7 +116,7 @@
       outline: 0;
     }
   }
-// стиль для кнопки скрытия мобильного меню
+  // стиль для кнопки скрытия мобильного меню
   .main-nav__close {
     border: none;
     position: absolute;
